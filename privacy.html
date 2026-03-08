@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — PhotoFresh — Agam Labs</title>
+  <meta name="description" content="PhotoFresh privacy policy. No data collected. No data shared. No data transmitted. Everything stays on your device.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">Agam Labs</a>
+    <ul class="nav-links">
+      <li><a href="/privacy.html">Privacy</a></li>
+      <li><a href="/support.html">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="policy">
+  <h2>Privacy Policy — PhotoFresh</h2>
+  <p class="effective-date">Last updated: March 8, 2026 &middot; Developer: Agam Labs (Swaminathan K)</p>
+
+  <h3>1. Overview</h3>
+  <p>PhotoFresh is a privacy-first gallery cleaner for Android. It runs entirely on your device. We do not collect, store, or transmit any personal data.</p>
+
+  <h3>2. Data We Collect</h3>
+  <p>None. PhotoFresh does not collect any data. Specifically:</p>
+  <ul>
+    <li>No personal information (name, email, phone number)</li>
+    <li>No device identifiers</li>
+    <li>No usage analytics or crash reports</li>
+    <li>No location data</li>
+    <li>No browsing history</li>
+    <li>No cookies or tracking pixels</li>
+  </ul>
+
+  <h3>3. Data We Access (On Your Device Only)</h3>
+  <p>PhotoFresh accesses your photos and videos through Android's MediaStore API to analyze your gallery. This includes:</p>
+  <ul>
+    <li>File metadata (size, date, type, folder name)</li>
+    <li>Image thumbnails (for duplicate and blur detection)</li>
+    <li>WhatsApp media folder (via Storage Access Framework, with your explicit permission)</li>
+  </ul>
+  <p>This data is processed entirely on your device. It is never uploaded, transmitted, or shared with anyone — including us.</p>
+
+  <h3>4. Internet Access</h3>
+  <p>PhotoFresh does not use the INTERNET permission. The only exception is Google Play Billing for premium purchases, which is handled entirely by Google Play Services.</p>
+
+  <h3>5. Third-Party Services</h3>
+  <p>PhotoFresh does not integrate any third-party SDKs, analytics tools, advertising networks, or cloud services. There is no Firebase, no Crashlytics, no Mixpanel, no Amplitude — nothing.</p>
+
+  <h3>6. Data Deletion</h3>
+  <p>When you delete items through PhotoFresh, they are moved to your device's system trash (recoverable for 30 days via Android's built-in trash). PhotoFresh uses Android's standard <code>MediaStore.createDeleteRequest</code> API, which requires your explicit confirmation before any deletion occurs.</p>
+
+  <h3>7. Data Storage</h3>
+  <p>Scan results and app preferences are stored locally on your device using Android's Room database and SharedPreferences. This data never leaves your device and is automatically removed if you uninstall the app.</p>
+
+  <h3>8. Children's Privacy</h3>
+  <p>PhotoFresh is not directed at children under 13. We do not knowingly collect any data from children — or from anyone.</p>
+
+  <h3>9. Permissions</h3>
+  <ul>
+    <li><strong>READ_MEDIA_IMAGES / READ_MEDIA_VIDEO:</strong> To scan your gallery</li>
+    <li><strong>READ_MEDIA_VISUAL_USER_SELECTED:</strong> For partial photo access (Android 14+)</li>
+    <li><strong>POST_NOTIFICATIONS:</strong> For optional cleanup reminders</li>
+    <li><strong>Storage Access Framework:</strong> For WhatsApp folder access (user-initiated)</li>
+  </ul>
+
+  <h3>10. Changes to This Policy</h3>
+  <p>If we update this policy, we will post the new version at this URL. Since we collect no data, changes are unlikely.</p>
+
+  <h3>11. Contact</h3>
+  <p>For questions about this privacy policy:<br>
+  Email: <a href="mailto:agamlabs@gmail.com">agamlabs@gmail.com</a></p>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/support.html">Support</a>
+    </div>
+    <p>&copy; 2026 Agam Labs. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
