@@ -53,7 +53,7 @@ export function Footer() {
                 About
               </Link>
               <Link
-                href="/photofresh/privacy"
+                href="/privacy"
                 className="text-sm text-white/50 transition-colors duration-200 hover:text-emerald-400 dark:text-white/50 [html:not(.dark)_&]:text-black/40 [html:not(.dark)_&]:hover:text-emerald-600"
               >
                 Privacy Policy

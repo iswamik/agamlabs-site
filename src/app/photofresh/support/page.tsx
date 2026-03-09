@@ -17,9 +17,26 @@ export const metadata: Metadata = {
     "Get help with PhotoFresh. Contact Agam Labs support or browse frequently asked questions.",
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: product.faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function PhotoFreshSupportPage() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* ─── Header ─── */}
       <header className="animate-on-scroll">
         <p className="text-label">Support</p>

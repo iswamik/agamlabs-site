@@ -5,9 +5,24 @@ import { AgamLogomark } from "@/components/logos/agam-logo";
 import { PhotoFreshLogomark } from "@/components/logos/photofresh-logo";
 import { NotiFreshLogomark } from "@/components/logos/notifresh-logo";
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Agam Labs",
+  url: "https://agamlabs.dev",
+  logo: "https://agamlabs.dev/brand/favicon.svg",
+  description:
+    "Agam Labs builds privacy-first Android apps for Indian users. No data collected. No cloud. Everything stays on your device.",
+  email: "hello@agamlabs.dev",
+};
+
 export default function HomePage() {
   return (
     <div className="relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
       {/* ─── Hero ─── */}
       <section className="gradient-mesh relative flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
         <p className="text-label animate-on-scroll">

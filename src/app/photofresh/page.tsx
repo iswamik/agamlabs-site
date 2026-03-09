@@ -22,9 +22,34 @@ export const metadata: Metadata = {
 
 const featureIcons = [Copy, Eye, Clock, Trash2, MessageCircle, WifiOff];
 
+const softwareJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "PhotoFresh",
+  description: product.description,
+  applicationCategory: "UtilitiesApplication",
+  operatingSystem: "Android",
+  offers: {
+    "@type": "AggregateOffer",
+    lowPrice: "0",
+    highPrice: "299",
+    priceCurrency: "INR",
+    offerCount: 3,
+  },
+  author: {
+    "@type": "Organization",
+    name: "Agam Labs",
+    url: "https://agamlabs.dev",
+  },
+};
+
 export default function PhotoFreshPage() {
   return (
     <div className="relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+      />
       {/* ─── Hero ─── */}
       <section className="gradient-mesh flex flex-col items-center justify-center px-6 py-20 text-center md:py-28">
         <PhotoFreshLogomark size={48} className="text-emerald-400 animate-on-scroll" />

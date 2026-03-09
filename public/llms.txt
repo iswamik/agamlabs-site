@@ -1,0 +1,50 @@
+# Agam Labs
+
+> Privacy-first Android apps for Indian users. "Agam" means "inside" in Tamil. Data stays on device.
+
+## Company
+
+Agam Labs builds Android apps that prioritize user privacy. Our apps have no internet permission (except Play Billing), no analytics, no tracking, no cloud. All processing happens on-device.
+
+- Website: https://agamlabs.dev
+- Contact: hello@agamlabs.dev
+- Developer: Swaminathan K
+
+## Products
+
+### PhotoFresh
+Clean gallery. Clear mind.
+Find duplicates, blurry shots, old screenshots, and WhatsApp clutter — clean up in minutes. 100% on-device.
+- Product page: https://agamlabs.dev/photofresh
+- Privacy policy: https://agamlabs.dev/photofresh/privacy
+- Support: https://agamlabs.dev/photofresh/support
+- Status: Coming soon to Google Play
+- Pricing: Free (Quick Scan + unlimited deletes) | Premium ₹49/mo or ₹299/yr
+
+### NotiFresh
+Tame your notifications.
+Smart categorization, quiet hours, and batch management — all on-device, all private.
+- Product page: https://agamlabs.dev/notifresh
+- Privacy policy: https://agamlabs.dev/notifresh/privacy
+- Support: https://agamlabs.dev/notifresh/support
+- Status: Coming soon
+
+## Pages
+
+- Home: https://agamlabs.dev
+- About: https://agamlabs.dev/about
+- Privacy Policy: https://agamlabs.dev/privacy
+- PhotoFresh: https://agamlabs.dev/photofresh
+- PhotoFresh Privacy: https://agamlabs.dev/photofresh/privacy
+- PhotoFresh Support: https://agamlabs.dev/photofresh/support
+- NotiFresh: https://agamlabs.dev/notifresh
+- NotiFresh Privacy: https://agamlabs.dev/notifresh/privacy
+- NotiFresh Support: https://agamlabs.dev/notifresh/support
+
+## Privacy Philosophy
+
+- Zero data collection — not even crash reports
+- No INTERNET permission in apps (except Google Play Billing)
+- No Firebase, Mixpanel, Amplitude, or Crashlytics
+- All processing on-device
+- Uninstall removes everything — nothing on our servers
