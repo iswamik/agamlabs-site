@@ -6,9 +6,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { getProduct } from "@/lib/products";
+import { Mail } from "lucide-react";
 
 const product = getProduct("photofresh")!;
 
@@ -20,43 +19,47 @@ export const metadata: Metadata = {
 
 export default function PhotoFreshSupportPage() {
   return (
-    <div className="space-y-12">
-      {/* Contact */}
-      <section>
-        <h1 className="text-2xl font-bold">Support — {product.name}</h1>
-        <Card className="mt-6 border-brand bg-surface text-center animate-[glow-pulse_4s_ease-in-out_infinite]">
-          <CardHeader>
-            <CardTitle className="text-base">Need help?</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <a
-              href={`mailto:${product.privacy.contactEmail}`}
-              className="text-lg font-semibold text-brand-light transition-colors hover:text-brand"
-            >
-              {product.privacy.contactEmail}
-            </a>
-          </CardContent>
-        </Card>
-      </section>
+    <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
+      {/* ─── Header ─── */}
+      <header className="animate-on-scroll">
+        <p className="text-label">Support</p>
+        <h1 className="text-headline mt-3">{product.name}</h1>
+      </header>
 
-      <Separator />
+      {/* ─── Contact Card ─── */}
+      <div className="glass-card mt-12 p-8 text-center animate-on-scroll">
+        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10">
+          <Mail className="h-6 w-6 text-emerald-400" />
+        </div>
+        <p className="mt-4 text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50">
+          Need help? Reach out anytime.
+        </p>
+        <a
+          href={`mailto:${product.privacy.contactEmail}`}
+          className="mt-2 inline-block text-lg font-semibold text-emerald-400 transition-colors hover:text-emerald-300"
+        >
+          {product.privacy.contactEmail}
+        </a>
+      </div>
 
-      {/* FAQ */}
-      <section>
-        <h2 className="mb-4 text-xl font-semibold">
-          Frequently Asked Questions
+      {/* ─── FAQ ─── */}
+      <section className="mt-16">
+        <p className="text-label animate-on-scroll">FAQ</p>
+        <h2 className="text-headline mt-3 animate-on-scroll">
+          Frequently asked questions.
         </h2>
-        <Accordion className="space-y-2">
+
+        <Accordion className="mt-8 space-y-3">
           {product.faqs.map((faq, i) => (
             <AccordionItem
               key={i}
               value={`faq-${i}`}
-              className="rounded-lg border border-border bg-surface px-4 transition-all duration-200 hover:bg-surface-alt hover:border-brand/20"
+              className="glass-card overflow-hidden px-6 animate-on-scroll"
             >
-              <AccordionTrigger className="text-left text-sm font-medium">
+              <AccordionTrigger className="py-4 text-left font-medium text-white/80 dark:text-white/80 [html:not(.dark)_&]:text-black/70">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">
+              <AccordionContent className="pb-4 text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

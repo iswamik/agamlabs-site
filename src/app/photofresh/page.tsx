@@ -1,10 +1,16 @@
 // Copyright 2026 Agam Labs. All rights reserved.
 import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { FeatureCard } from "@/components/feature-card";
 import { getProduct } from "@/lib/products";
+import {
+  Copy,
+  Eye,
+  Clock,
+  Trash2,
+  MessageCircle,
+  WifiOff,
+} from "lucide-react";
+import { Check } from "lucide-react";
 
 const product = getProduct("photofresh")!;
 
@@ -13,78 +19,184 @@ export const metadata: Metadata = {
   description: product.description,
 };
 
+const featureIcons = [Copy, Eye, Clock, Trash2, MessageCircle, WifiOff];
+
 export default function PhotoFreshPage() {
   return (
-    <div className="space-y-12">
-      {/* Hero */}
-      <section>
-        <div className="flex items-center gap-3">
-          <h1 className="text-3xl font-bold gradient-text">{product.name}</h1>
-          <Badge className="shimmer-badge text-white">Available</Badge>
-        </div>
-        <p className="mt-2 italic text-brand-light">{product.tagline}</p>
-        <p className="mt-4 text-muted-foreground">{product.description}</p>
+    <div className="relative">
+      {/* ─── Hero ─── */}
+      <section className="gradient-mesh flex min-h-[50vh] flex-col items-center justify-center px-6 py-24 text-center md:py-32">
+        <p className="text-label animate-on-scroll">Privacy-First Gallery Cleaner</p>
+        <h1 className="text-display gradient-text mt-4 animate-on-scroll">
+          {product.name}
+        </h1>
+        <p className="mt-4 text-lg font-medium text-emerald-400 animate-on-scroll">
+          {product.tagline}
+        </p>
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed animate-on-scroll">
+          {product.description}
+        </p>
+        <Badge className="mt-8 shimmer-badge text-white animate-on-scroll">
+          Available Now
+        </Badge>
       </section>
 
-      {/* Features */}
-      <section>
-        <h2 className="mb-4 text-xl font-semibold">Features</h2>
-        <div className="grid gap-4 sm:grid-cols-2 animate-on-scroll">
-          {product.features.map((feature) => (
-            <FeatureCard
-              key={feature.title}
-              title={feature.title}
-              description={feature.description}
-            />
-          ))}
-        </div>
-      </section>
+      {/* ─── Features ─── */}
+      <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+        <p className="text-label animate-on-scroll">Features</p>
+        <h2 className="text-headline mt-3 animate-on-scroll">
+          Everything you need to
+          <br />
+          <span className="gradient-text">reclaim your gallery.</span>
+        </h2>
 
-      <Separator />
-
-      {/* Pricing */}
-      {product.pricing && (
-        <section>
-          <h2 className="mb-4 text-xl font-semibold">Pricing</h2>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Card className="border-border bg-surface">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-base">Free</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  {product.pricing.free}
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {product.features.map((feature, i) => {
+            const Icon = featureIcons[i];
+            return (
+              <div
+                key={feature.title}
+                className="glass-card p-6 animate-on-scroll"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
+                  <Icon className="h-5 w-5 text-emerald-400" />
+                </div>
+                <h3 className="mt-4 font-semibold text-white/90 dark:text-white/90 [html:not(.dark)_&]:text-black/80">
+                  {feature.title}
+                </h3>
+                <p className="mt-2 text-sm text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed">
+                  {feature.description}
                 </p>
-              </CardContent>
-            </Card>
-            <Card className="border-brand bg-surface animate-[glow-pulse_4s_ease-in-out_infinite] transition-all duration-300 hover:-translate-y-0.5">
-              <CardHeader className="pb-2">
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ─── Pricing ─── */}
+      {product.pricing && (
+        <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+          <p className="text-label text-center animate-on-scroll">Pricing</p>
+          <h2 className="text-headline mt-3 text-center animate-on-scroll">
+            Simple, honest pricing.
+          </h2>
+          <p className="mx-auto mt-3 max-w-lg text-center text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 animate-on-scroll">
+            Free is generous. Premium is powerful. No dark patterns.
+          </p>
+
+          <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
+            {/* Free tier */}
+            <div className="glass-card p-8 animate-on-scroll">
+              <p className="text-sm font-medium text-white/40 dark:text-white/40 [html:not(.dark)_&]:text-black/40">
+                Free
+              </p>
+              <p className="mt-2 text-3xl font-bold text-white/90 dark:text-white/90 [html:not(.dark)_&]:text-black/80">
+                ₹0
+              </p>
+              <p className="mt-1 text-sm text-white/40 dark:text-white/40 [html:not(.dark)_&]:text-black/40">
+                Forever
+              </p>
+              <div className="mt-6 h-px bg-white/[0.06]" />
+              <ul className="mt-6 space-y-3">
+                {[
+                  "Quick Scan — unlimited",
+                  "Duplicates, screenshots, old media",
+                  "WhatsApp base cleanup",
+                  "Unlimited deletes",
+                  "100% offline",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-sm text-white/60 dark:text-white/60 [html:not(.dark)_&]:text-black/50"
+                  >
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Monthly tier */}
+            <div className="glass-card p-8 animate-on-scroll">
+              <p className="text-sm font-medium text-emerald-400">
+                Premium Monthly
+              </p>
+              <p className="mt-2 text-3xl font-bold text-white/90 dark:text-white/90 [html:not(.dark)_&]:text-black/80">
+                {product.pricing.monthly}
+              </p>
+              <p className="mt-1 text-sm text-white/40 dark:text-white/40 [html:not(.dark)_&]:text-black/40">
+                Billed monthly
+              </p>
+              <div className="mt-6 h-px bg-white/[0.06]" />
+              <ul className="mt-6 space-y-3">
+                {[
+                  "Everything in Free",
+                  "Deep Scan (blur, near-dupes, burst)",
+                  "Advanced WhatsApp tools",
+                  "Auto-cleanup scheduler",
+                  "Full scan history",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-sm text-white/60 dark:text-white/60 [html:not(.dark)_&]:text-black/50"
+                  >
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Yearly tier */}
+            <div className="rotating-border animate-on-scroll">
+              <div className="relative rounded-[1rem] bg-[#141414] p-8 dark:bg-[#141414] [html:not(.dark)_&]:bg-white">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-base text-brand-light">
-                    Premium
-                  </CardTitle>
-                  <Badge variant="outline" className="border-brand text-brand-light animate-[border-glow_3s_ease-in-out_infinite]">
-                    {product.pricing.premiumPrice}
+                  <p className="text-sm font-medium text-emerald-400">
+                    Premium Yearly
+                  </p>
+                  <Badge className="shimmer-badge text-white text-xs">
+                    {product.pricing.yearlySavings}
                   </Badge>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  {product.pricing.premium}
+                <p className="mt-2 text-3xl font-bold text-white/90 dark:text-white/90 [html:not(.dark)_&]:text-black/80">
+                  {product.pricing.yearly}
                 </p>
-              </CardContent>
-            </Card>
+                <p className="mt-1 text-sm text-white/40 dark:text-white/40 [html:not(.dark)_&]:text-black/40">
+                  {product.pricing.freeTrial}
+                </p>
+                <div className="mt-6 h-px bg-white/[0.06]" />
+                <ul className="mt-6 space-y-3">
+                  {[
+                    "Everything in Premium",
+                    "3-day free trial",
+                    "₹25/mo effective price",
+                    "Best value for regular users",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm text-white/60 dark:text-white/60 [html:not(.dark)_&]:text-black/50"
+                    >
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
       )}
 
-      <Separator />
-
-      {/* CTA */}
-      <section className="py-8 text-center animate-on-scroll">
-        <p className="text-lg text-muted-foreground">Coming soon on Google Play</p>
-        <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/5 px-6 py-2 text-sm text-brand-light">
-          Stay tuned for launch
+      {/* ─── CTA ─── */}
+      <section className="mx-auto max-w-6xl px-6 py-24 text-center md:py-32">
+        <div className="glass-card mx-auto max-w-2xl p-12 animate-on-scroll">
+          <h2 className="text-headline gradient-text">Coming Soon</h2>
+          <p className="mt-4 text-lg text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50">
+            PhotoFresh will be available on Google Play soon.
+          </p>
+          <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-6 py-3 text-sm font-medium text-emerald-400">
+            Stay tuned for launch
+          </div>
         </div>
       </section>
     </div>

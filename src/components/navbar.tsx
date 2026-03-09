@@ -25,11 +25,11 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border/50 bg-surface/60 backdrop-blur-md backdrop-saturate-150 transition-all duration-300">
-      <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
+    <nav className="sticky top-0 z-50 border-b border-white/[0.08] bg-[#0a0a0a]/60 backdrop-blur-xl backdrop-saturate-150 transition-all duration-300 dark:border-white/[0.08] dark:bg-[#0a0a0a]/60 [html:not(.dark)_&]:border-black/[0.06] [html:not(.dark)_&]:bg-white/60">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="text-xl font-bold text-brand-light transition-all duration-300 hover:text-brand hover:drop-shadow-[0_0_8px_rgba(76,175,80,0.4)]"
+          className="text-xl font-bold tracking-tight text-emerald-400 transition-all duration-300 hover:text-emerald-300 hover:drop-shadow-[0_0_12px_rgba(16,185,129,0.4)]"
         >
           Agam Labs
         </Link>
@@ -40,12 +40,14 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="relative rounded-md px-3 py-2 text-sm text-muted-foreground transition-all duration-200 hover:text-foreground after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:bg-brand after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-3/4"
+              className="relative rounded-lg px-4 py-2 text-sm text-white/60 transition-all duration-200 hover:text-white/90 dark:text-white/60 dark:hover:text-white/90 [html:not(.dark)_&]:text-black/50 [html:not(.dark)_&]:hover:text-black/80"
             >
               {link.label}
             </Link>
           ))}
-          <ThemeToggle />
+          <div className="ml-2">
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Mobile nav */}
@@ -60,9 +62,9 @@ export function Navbar() {
                 </Button>
               }
             />
-            <SheetContent side="right" className="w-64 bg-surface">
+            <SheetContent side="right" className="w-64 bg-[#141414] dark:bg-[#141414] [html:not(.dark)_&]:bg-white">
               <SheetHeader>
-                <SheetTitle className="text-brand-light">Agam Labs</SheetTitle>
+                <SheetTitle className="text-emerald-400">Agam Labs</SheetTitle>
               </SheetHeader>
               <div className="mt-6 flex flex-col gap-1 px-4">
                 {navLinks.map((link) => (
@@ -70,7 +72,7 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="rounded-md px-3 py-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                    className="rounded-lg px-3 py-2.5 text-white/60 transition-colors hover:bg-white/[0.05] hover:text-white/90 dark:text-white/60 dark:hover:bg-white/[0.05] dark:hover:text-white/90 [html:not(.dark)_&]:text-black/60 [html:not(.dark)_&]:hover:bg-black/[0.03] [html:not(.dark)_&]:hover:text-black/80"
                   >
                     {link.label}
                   </Link>

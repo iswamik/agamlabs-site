@@ -7,7 +7,14 @@ export interface Product {
   description: string;
   status: "live" | "coming-soon";
   playStoreUrl?: string;
-  pricing?: { free: string; premium: string; premiumPrice: string };
+  pricing?: {
+    free: string;
+    premium: string;
+    monthly: string;
+    yearly: string;
+    yearlySavings: string;
+    freeTrial: string;
+  };
   features: { title: string; description: string }[];
   faqs: { question: string; answer: string }[];
   privacy: {
@@ -27,9 +34,12 @@ export const products: Product[] = [
       "Your gallery is full of duplicates, blurry shots, and old screenshots you'll never open again. PhotoFresh finds them all — and helps you clean up in minutes. Everything runs on your device. No uploads. No cloud. No accounts. Your photos stay yours.",
     status: "live",
     pricing: {
-      free: "Scan your entire gallery and delete a limited number of items",
-      premium: "Unlimited cleanup and advanced detection features",
-      premiumPrice: "₹299 one-time",
+      free: "Quick Scan with unlimited deletes — duplicates, screenshots, old media, WhatsApp base cleanup",
+      premium: "Deep Scan, advanced WhatsApp tools, auto-cleanup, sort/filter, scan history",
+      monthly: "₹49/mo",
+      yearly: "₹299/yr",
+      yearlySavings: "49% savings",
+      freeTrial: "3-day free trial (yearly)",
     },
     features: [
       {
@@ -82,7 +92,7 @@ export const products: Product[] = [
       {
         question: "Is PhotoFresh free?",
         answer:
-          "Free users can scan their entire gallery and delete a limited number of items. PhotoFresh Premium (₹299 one-time) unlocks unlimited cleanup and advanced detection features.",
+          "Free users get Quick Scan with unlimited deletes — duplicates, screenshots, old media, and WhatsApp base cleanup. PhotoFresh Premium (₹49/mo or ₹299/yr) unlocks Deep Scan, advanced WhatsApp tools, auto-cleanup, and more. Yearly plans include a 3-day free trial.",
       },
       {
         question: "Why does PhotoFresh need the notification permission?",
@@ -98,7 +108,7 @@ export const products: Product[] = [
     privacy: {
       lastUpdated: "March 8, 2026",
       developer: "Agam Labs (Swaminathan K)",
-      contactEmail: "agamlabs@gmail.com",
+      contactEmail: "hello@agamlabs.dev",
       sections: [
         {
           title: "1. Overview",
@@ -153,7 +163,7 @@ export const products: Product[] = [
         {
           title: "11. Contact",
           content:
-            "For questions about this privacy policy:\nEmail: agamlabs@gmail.com",
+            "For questions about this privacy policy:\nEmail: hello@agamlabs.dev",
         },
       ],
     },
@@ -170,7 +180,7 @@ export const products: Product[] = [
     privacy: {
       lastUpdated: "March 8, 2026",
       developer: "Agam Labs (Swaminathan K)",
-      contactEmail: "agamlabs@gmail.com",
+      contactEmail: "hello@agamlabs.dev",
       sections: [
         {
           title: "1. Overview",
@@ -185,7 +195,7 @@ export const products: Product[] = [
         {
           title: "3. Contact",
           content:
-            "For questions about this privacy policy:\nEmail: agamlabs@gmail.com",
+            "For questions about this privacy policy:\nEmail: hello@agamlabs.dev",
         },
       ],
     },
