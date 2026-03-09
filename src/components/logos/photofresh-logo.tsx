@@ -19,68 +19,32 @@ export function PhotoFreshLogomark({
       className={className}
       aria-label="PhotoFresh logo"
     >
-      {/* Camera aperture circle */}
-      <circle
-        cx="24"
-        cy="24"
-        r="16"
+      {/* Photo frame — rounded rectangle */}
+      <rect
+        x="6"
+        y="8"
+        width="32"
+        height="32"
+        rx="4"
         stroke="currentColor"
-        strokeWidth="3"
+        strokeWidth="2.5"
         fill="none"
       />
-      {/* Aperture blades */}
+      {/* Mountain landscape inside frame */}
       <path
-        d="M24 8L28 18"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M37.9 16L28 20"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M37.9 32L28 26"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M24 40L20 30"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M10.1 32L20 28"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M10.1 16L20 22"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      {/* Inner circle */}
-      <circle
-        cx="24"
-        cy="24"
-        r="6"
+        d="M6 32l8-10 6 6 8-12 10 16"
         stroke="currentColor"
         strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         fill="none"
       />
-      {/* Emerald sparkle */}
-      <circle cx="38" cy="10" r="3" fill="#10b981" />
+      {/* Sun inside frame */}
+      <circle cx="30" cy="17" r="3" fill="currentColor" />
+      {/* 4-point emerald sparkle — top right, outside frame */}
       <path
-        d="M38 6V8M38 12V14M34 10H36M40 10H42"
-        stroke="#10b981"
-        strokeWidth="1.5"
-        strokeLinecap="round"
+        d="M42 6l-1.5 3.5L37 11l3.5 1.5L42 16l1.5-3.5L47 11l-3.5-1.5Z"
+        fill="#10b981"
       />
     </svg>
   );
