@@ -1,6 +1,7 @@
 <svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Logomark -->
   <text x="24" y="36" text-anchor="middle" font-family="'Noto Sans Tamil', sans-serif" font-size="38" font-weight="700" fill="currentColor">அ</text>
+  <path d="M44 3l-1.5 3.5L39 8l3.5 1.5L44 13l1.5-3.5L49 8l-3.5-1.5Z" fill="#F59E0B"/>
   <!-- Wordmark -->
   <text x="56" y="31" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="700" fill="currentColor">Agam Labs</text>
 </svg>

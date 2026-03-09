@@ -28,6 +28,11 @@ export function AgamLogomark({ size = 24, className }: AgamLogomarkProps) {
       >
         அ
       </text>
+      {/* 4-point golden sparkle — top right */}
+      <path
+        d="M44 3l-1.5 3.5L39 8l3.5 1.5L44 13l1.5-3.5L49 8l-3.5-1.5Z"
+        fill="#F59E0B"
+      />
     </svg>
   );
 }

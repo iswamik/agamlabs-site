@@ -49,8 +49,11 @@ export function NotiFreshLogomark({
         strokeWidth="2"
         strokeLinecap="round"
       />
-      {/* Emerald notification dot */}
-      <circle cx="34" cy="14" r="4" fill="#10b981" />
+      {/* 4-point golden sparkle — notification accent */}
+      <path
+        d="M34 9l-1.5 3.5L29 14l3.5 1.5L34 19l1.5-3.5L39 14l-3.5-1.5Z"
+        fill="#F59E0B"
+      />
     </svg>
   );
 }

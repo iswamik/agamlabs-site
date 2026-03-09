@@ -41,10 +41,10 @@ export function PhotoFreshLogomark({
       />
       {/* Sun inside frame */}
       <circle cx="30" cy="17" r="3" fill="currentColor" />
-      {/* 4-point emerald sparkle — top right, outside frame */}
+      {/* 4-point golden sparkle — top right, outside frame */}
       <path
         d="M44 3l-1.5 3.5L39 8l3.5 1.5L44 13l1.5-3.5L49 8l-3.5-1.5Z"
-        fill="#10b981"
+        fill="#F59E0B"
       />
     </svg>
   );
