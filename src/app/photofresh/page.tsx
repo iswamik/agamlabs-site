@@ -11,6 +11,7 @@ import {
   WifiOff,
 } from "lucide-react";
 import { Check } from "lucide-react";
+import { PhotoFreshLogomark } from "@/components/logos/photofresh-logo";
 
 const product = getProduct("photofresh")!;
 
@@ -25,24 +26,25 @@ export default function PhotoFreshPage() {
   return (
     <div className="relative">
       {/* ─── Hero ─── */}
-      <section className="gradient-mesh flex min-h-[50vh] flex-col items-center justify-center px-6 py-24 text-center md:py-32">
-        <p className="text-label animate-on-scroll">Privacy-First Gallery Cleaner</p>
+      <section className="gradient-mesh flex flex-col items-center justify-center px-6 py-20 text-center md:py-28">
+        <PhotoFreshLogomark size={48} className="text-emerald-400 animate-on-scroll" />
+        <p className="text-label mt-6 animate-on-scroll">Privacy-First Gallery Cleaner</p>
         <h1 className="text-display gradient-text mt-4 animate-on-scroll">
           {product.name}
         </h1>
-        <p className="mt-4 text-lg font-medium text-emerald-400 animate-on-scroll">
+        <p className="mt-4 text-xl font-medium text-emerald-400 animate-on-scroll">
           {product.tagline}
         </p>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed animate-on-scroll">
+        <p className="mx-auto mt-4 max-w-2xl text-xl text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed animate-on-scroll">
           {product.description}
         </p>
-        <Badge className="mt-8 shimmer-badge text-white animate-on-scroll">
+        <Badge className="mt-8 shimmer-badge px-5 py-2 text-sm !h-auto text-white animate-on-scroll">
           Available Now
         </Badge>
       </section>
 
       {/* ─── Features ─── */}
-      <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <p className="text-label animate-on-scroll">Features</p>
         <h2 className="text-headline mt-3 animate-on-scroll">
           Everything you need to
@@ -58,13 +60,13 @@ export default function PhotoFreshPage() {
                 key={feature.title}
                 className="glass-card p-6 animate-on-scroll"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
-                  <Icon className="h-5 w-5 text-emerald-400" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/10">
+                  <Icon className="h-6 w-6 text-emerald-400" />
                 </div>
                 <h3 className="mt-4 font-semibold text-white/90 dark:text-white/90 [html:not(.dark)_&]:text-black/80">
                   {feature.title}
                 </h3>
-                <p className="mt-2 text-sm text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed">
+                <p className="mt-2 text-base text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -75,7 +77,7 @@ export default function PhotoFreshPage() {
 
       {/* ─── Pricing ─── */}
       {product.pricing && (
-        <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+        <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <p className="text-label text-center animate-on-scroll">Pricing</p>
           <h2 className="text-headline mt-3 text-center animate-on-scroll">
             Simple, honest pricing.
@@ -188,10 +190,10 @@ export default function PhotoFreshPage() {
       )}
 
       {/* ─── CTA ─── */}
-      <section className="mx-auto max-w-6xl px-6 py-24 text-center md:py-32">
+      <section className="mx-auto max-w-6xl px-6 py-16 text-center md:py-24">
         <div className="glass-card mx-auto max-w-2xl p-12 animate-on-scroll">
           <h2 className="text-headline gradient-text">Coming Soon</h2>
-          <p className="mt-4 text-lg text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50">
+          <p className="mt-4 text-xl text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50">
             PhotoFresh will be available on Google Play soon.
           </p>
           <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-6 py-3 text-sm font-medium text-emerald-400">

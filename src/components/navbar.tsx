@@ -13,6 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { AgamLogomark } from "@/components/logos/agam-logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -29,8 +30,9 @@ export function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="text-xl font-bold tracking-tight text-emerald-400 transition-all duration-300 hover:text-emerald-300 hover:drop-shadow-[0_0_12px_rgba(16,185,129,0.4)]"
+          className="flex items-center gap-2 text-xl font-bold tracking-tight text-emerald-400 transition-all duration-300 hover:text-emerald-300 hover:drop-shadow-[0_0_12px_rgba(16,185,129,0.4)]"
         >
+          <AgamLogomark size={24} className="text-emerald-400" />
           Agam Labs
         </Link>
 

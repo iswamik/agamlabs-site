@@ -1,0 +1,10 @@
+<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logomark -->
+  <path d="M24 6C14 6 8 14 8 24c0 6 3 11 8 14" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M24 6c10 0 16 8 16 18 0 5-2 9-5 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M20 18c0-2 2-4 4-4s4 2 4 4-2 6-4 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M24 28c-2 4-5 8-8 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <circle cx="35" cy="36" r="3" fill="#10b981"/>
+  <!-- Wordmark -->
+  <text x="56" y="31" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="700" fill="currentColor">Agam Labs</text>
+</svg>

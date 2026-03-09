@@ -2,28 +2,32 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { CloudOff, ShieldCheck, Smartphone } from "lucide-react";
+import { AgamLogomark } from "@/components/logos/agam-logo";
+import { PhotoFreshLogomark } from "@/components/logos/photofresh-logo";
+import { NotiFreshLogomark } from "@/components/logos/notifresh-logo";
 
 export default function HomePage() {
   return (
     <div className="relative">
       {/* ─── Hero ─── */}
-      <section className="gradient-mesh relative flex min-h-[80vh] flex-col items-center justify-center px-6 text-center">
+      <section className="gradient-mesh relative flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
         <p className="text-label animate-on-scroll">
           Privacy-first Android Apps
         </p>
+        <AgamLogomark size={56} className="mt-6 text-emerald-400 animate-on-scroll" />
         <h1 className="text-display gradient-text mt-4 animate-on-scroll">
           Agam Labs
         </h1>
-        <p className="mt-4 text-lg text-white/60 dark:text-white/60 [html:not(.dark)_&]:text-black/50 animate-on-scroll">
+        <p className="mt-4 text-xl text-white/60 dark:text-white/60 [html:not(.dark)_&]:text-black/50 animate-on-scroll">
           Built inside. For what&apos;s inside.
         </p>
-        <Badge className="mt-8 shimmer-badge text-white animate-on-scroll">
+        <Badge className="mt-8 shimmer-badge px-5 py-2 text-sm !h-auto text-white animate-on-scroll">
           Zero data collected. Ever.
         </Badge>
       </section>
 
       {/* ─── Products (Bento Grid) ─── */}
-      <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <p className="text-label animate-on-scroll">Our Products</p>
         <h2 className="text-headline mt-3 animate-on-scroll">
           Apps that work for you,
@@ -39,17 +43,18 @@ export default function HomePage() {
           >
             <div>
               <div className="flex items-center gap-3">
+                <PhotoFreshLogomark size={24} className="text-emerald-400" />
                 <h3 className="text-2xl font-bold text-white/90 dark:text-white/90 [html:not(.dark)_&]:text-black/80">
                   PhotoFresh
                 </h3>
-                <Badge className="shimmer-badge text-white text-xs">
+                <Badge className="shimmer-badge px-5 py-2 text-sm !h-auto text-white">
                   Available
                 </Badge>
               </div>
               <p className="mt-2 text-emerald-400 font-medium">
                 Clean gallery. Clear mind.
               </p>
-              <p className="mt-4 text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed">
+              <p className="mt-4 text-base text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed">
                 Find duplicates, blurry shots, and old screenshots — clean up in
                 minutes. 100% on-device. No uploads. No cloud.
               </p>
@@ -67,17 +72,18 @@ export default function HomePage() {
           >
             <div>
               <div className="flex items-center gap-3">
+                <NotiFreshLogomark size={24} className="text-emerald-400" />
                 <h3 className="text-2xl font-bold text-white/90 dark:text-white/90 [html:not(.dark)_&]:text-black/80">
                   NotiFresh
                 </h3>
-                <Badge variant="outline" className="border-white/20 text-white/50 text-xs dark:border-white/20 dark:text-white/50 [html:not(.dark)_&]:border-black/20 [html:not(.dark)_&]:text-black/40">
+                <Badge variant="outline" className="border-white/20 px-5 py-2 text-sm !h-auto text-white/50 dark:border-white/20 dark:text-white/50 [html:not(.dark)_&]:border-black/20 [html:not(.dark)_&]:text-black/40">
                   Coming Soon
                 </Badge>
               </div>
               <p className="mt-2 text-emerald-400 font-medium">
                 Tame your notifications.
               </p>
-              <p className="mt-4 text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed">
+              <p className="mt-4 text-base text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed">
                 Smart categorization, quiet hours, and batch management — all
                 on-device, all private.
               </p>
@@ -91,7 +97,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── Trust Section ─── */}
-      <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <p className="text-label text-center animate-on-scroll">
           Why Agam Labs
         </p>
@@ -132,7 +138,7 @@ export default function HomePage() {
               <h3 className="mt-4 text-lg font-semibold text-white/90 dark:text-white/90 [html:not(.dark)_&]:text-black/80">
                 {item.title}
               </h3>
-              <p className="mt-2 text-sm text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed">
+              <p className="mt-2 text-base text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed">
                 {item.description}
               </p>
             </div>

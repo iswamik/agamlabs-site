@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   },
   description:
     "Agam Labs builds privacy-first Android apps for Indian users. No data collected. No cloud. Everything stays on your device.",
+  icons: { icon: "/brand/favicon.svg" },
 };
 
 export default function RootLayout({

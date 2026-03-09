@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function NotiFreshSupportPage() {
   return (
-    <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
+    <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
       <header className="animate-on-scroll">
         <p className="text-label">Support</p>
         <h1 className="text-headline mt-3">NotiFresh</h1>

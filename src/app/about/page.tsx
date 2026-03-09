@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { Lock, Globe, Heart, Cpu } from "lucide-react";
+import { AgamLogomark } from "@/components/logos/agam-logo";
 
 export const metadata: Metadata = {
   title: "About",
@@ -40,18 +41,19 @@ export default function AboutPage() {
   return (
     <div className="relative">
       {/* ─── Hero ─── */}
-      <section className="gradient-mesh flex min-h-[40vh] flex-col items-center justify-center px-6 py-24 text-center md:py-32">
-        <p className="text-label animate-on-scroll">About</p>
+      <section className="gradient-mesh flex flex-col items-center justify-center px-6 py-20 text-center md:py-28">
+        <AgamLogomark size={48} className="text-emerald-400 animate-on-scroll" />
+        <p className="text-label mt-6 animate-on-scroll">About</p>
         <h1 className="text-display gradient-text mt-4 animate-on-scroll">
           Agam Labs
         </h1>
-        <p className="mt-4 text-lg text-emerald-400 font-medium animate-on-scroll">
+        <p className="mt-4 text-xl text-emerald-400 font-medium animate-on-scroll">
           &ldquo;Agam&rdquo; means inside — in Tamil.
         </p>
       </section>
 
       {/* ─── Mission ─── */}
-      <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <p className="text-label animate-on-scroll">Our Mission</p>
         <h2 className="text-headline mt-3 animate-on-scroll">
           Your data belongs
@@ -73,7 +75,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── Philosophy ─── */}
-      <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <p className="text-label text-center animate-on-scroll">
           Our Philosophy
         </p>
@@ -87,13 +89,13 @@ export default function AboutPage() {
               key={item.title}
               className="glass-card p-8 animate-on-scroll"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
-                <item.icon className="h-5 w-5 text-emerald-400" />
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/10">
+                <item.icon className="h-6 w-6 text-emerald-400" />
               </div>
               <h3 className="mt-4 text-lg font-semibold text-white/90 dark:text-white/90 [html:not(.dark)_&]:text-black/80">
                 {item.title}
               </h3>
-              <p className="mt-2 text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed">
+              <p className="mt-2 text-base text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed">
                 {item.description}
               </p>
             </div>
@@ -102,7 +104,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── The Name ─── */}
-      <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <div className="glass-card mx-auto max-w-3xl p-12 text-center animate-on-scroll">
           <p className="text-label">The Name</p>
           <p className="mt-6 text-lg text-white/60 dark:text-white/60 [html:not(.dark)_&]:text-black/50 leading-relaxed">
@@ -125,7 +127,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── Contact ─── */}
-      <section className="mx-auto max-w-6xl px-6 py-24 text-center md:py-32">
+      <section className="mx-auto max-w-6xl px-6 py-16 text-center md:py-24">
         <p className="text-label animate-on-scroll">Contact</p>
         <h2 className="text-headline mt-3 animate-on-scroll">Get in touch.</h2>
         <p className="mt-4 text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 animate-on-scroll">
