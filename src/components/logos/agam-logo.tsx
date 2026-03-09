@@ -28,8 +28,6 @@ export function AgamLogomark({ size = 24, className }: AgamLogomarkProps) {
       >
         அ
       </text>
-      {/* Emerald accent dot */}
-      <circle cx="40" cy="8" r="3.5" fill="#10b981" />
     </svg>
   );
 }

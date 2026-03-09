@@ -1,6 +1,5 @@
 // Copyright 2026 Agam Labs. All rights reserved.
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import { CloudOff, ShieldCheck, Smartphone } from "lucide-react";
 import { AgamLogomark } from "@/components/logos/agam-logo";
 import { PhotoFreshLogomark } from "@/components/logos/photofresh-logo";
@@ -21,9 +20,10 @@ export default function HomePage() {
         <p className="mt-4 text-xl text-white/60 dark:text-white/60 [html:not(.dark)_&]:text-black/50 animate-on-scroll">
           Built inside. For what&apos;s inside.
         </p>
-        <Badge className="mt-8 shimmer-badge px-5 py-2 text-sm !h-auto text-white animate-on-scroll">
+        <p className="mt-8 flex items-center gap-2 text-sm font-medium tracking-wide text-white/40 dark:text-white/40 [html:not(.dark)_&]:text-black/40 animate-on-scroll">
+          <ShieldCheck className="h-4 w-4 text-emerald-400" />
           Zero data collected. Ever.
-        </Badge>
+        </p>
       </section>
 
       {/* ─── Products (Bento Grid) ─── */}
@@ -47,9 +47,9 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-white/90 dark:text-white/90 [html:not(.dark)_&]:text-black/80">
                   PhotoFresh
                 </h3>
-                <Badge className="shimmer-badge px-5 py-2 text-sm !h-auto text-white">
-                  Available
-                </Badge>
+                <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/40 dark:border-white/10 dark:text-white/40 [html:not(.dark)_&]:border-black/10 [html:not(.dark)_&]:text-black/40">
+                  Coming Soon
+                </span>
               </div>
               <p className="mt-2 text-emerald-400 font-medium">
                 Clean gallery. Clear mind.
@@ -76,9 +76,9 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-white/90 dark:text-white/90 [html:not(.dark)_&]:text-black/80">
                   NotiFresh
                 </h3>
-                <Badge variant="outline" className="border-white/20 px-5 py-2 text-sm !h-auto text-white/50 dark:border-white/20 dark:text-white/50 [html:not(.dark)_&]:border-black/20 [html:not(.dark)_&]:text-black/40">
+                <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/40 dark:border-white/10 dark:text-white/40 [html:not(.dark)_&]:border-black/10 [html:not(.dark)_&]:text-black/40">
                   Coming Soon
-                </Badge>
+                </span>
               </div>
               <p className="mt-2 text-emerald-400 font-medium">
                 Tame your notifications.

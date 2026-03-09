@@ -38,9 +38,9 @@ export default function PhotoFreshPage() {
         <p className="mx-auto mt-4 max-w-2xl text-xl text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed animate-on-scroll">
           {product.description}
         </p>
-        <Badge className="mt-8 shimmer-badge px-5 py-2 text-sm !h-auto text-white animate-on-scroll">
-          Available Now
-        </Badge>
+        <p className="mt-8 text-sm font-medium tracking-wide text-white/40 dark:text-white/40 [html:not(.dark)_&]:text-black/40 animate-on-scroll">
+          Coming soon to Google Play
+        </p>
       </section>
 
       {/* ─── Features ─── */}
