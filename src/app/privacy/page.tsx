@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Agam Labs privacy policy. We collect zero data — no cookies, no analytics, no tracking. Your privacy is the architecture.",
+    "Agam Labs privacy policy. Zero data collected from this website. Your privacy is the architecture.",
 };
 
 const sections = [
@@ -27,7 +27,7 @@ const sections = [
   {
     title: "4. Data Collection",
     content:
-      "None. Agam Labs does not collect, store, process, or transmit any personal data — not from this website, and not from our apps. We have no databases, no user accounts, no analytics dashboards.",
+      "Agam Labs does not collect personal data from this website. Our apps process data on your device by default — each app's privacy policy details exactly what it accesses and whether any data leaves your device. We have no user accounts and no analytics dashboards.",
   },
   {
     title: "5. Third-Party Services",

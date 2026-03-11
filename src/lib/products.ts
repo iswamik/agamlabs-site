@@ -185,7 +185,7 @@ export const products: Product[] = [
         {
           title: "1. Overview",
           content:
-            "NotiFresh is a privacy-first notification manager for Android. Like all Agam Labs apps, it runs entirely on your device. We do not collect, store, or transmit any personal data.",
+            "NotiFresh is a privacy-first notification manager for Android. Like all Agam Labs apps, it is designed to keep your data on your device. We do not collect, store, or transmit any personal data.",
         },
         {
           title: "2. Data Collection",

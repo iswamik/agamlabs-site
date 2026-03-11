@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     template: "%s — Agam Labs",
   },
   description:
-    "Agam Labs builds privacy-first Android apps for Indian users. No data collected. No cloud. Everything stays on your device.",
+    "Privacy-first, offline-first Android apps for Indian users. Your data stays yours — always by default.",
   icons: { icon: "/brand/favicon.svg" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Agam Labs — Privacy-First Android Apps",
     description:
-      "Privacy-first Android apps for Indian users. No data collected. No cloud. Everything stays on your device.",
+      "Privacy-first, offline-first Android apps for Indian users. Your data stays yours — always by default.",
     url: "https://agamlabs.dev",
     siteName: "Agam Labs",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Agam Labs — Privacy-First Android Apps",
     description:
-      "Privacy-first Android apps for Indian users. No data collected. No cloud. Everything stays on your device.",
+      "Privacy-first, offline-first Android apps for Indian users. Your data stays yours — always by default.",
     images: ["/og-image.png"],
   },
 };
