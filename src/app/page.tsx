@@ -12,7 +12,7 @@ const organizationJsonLd = {
   url: "https://agamlabs.dev",
   logo: "https://agamlabs.dev/brand/favicon.svg",
   description:
-    "Agam Labs builds privacy-first Android apps for Indian users. No data collected. No cloud. Everything stays on your device.",
+    "Agam Labs builds privacy-first, offline-first Android apps for Indian users. Your data stays on your device — always by default, connected only when you choose.",
   email: "hello@agamlabs.dev",
 };
 
@@ -26,18 +26,18 @@ export default function HomePage() {
       {/* ─── Hero ─── */}
       <section className="gradient-mesh relative flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
         <p className="text-label animate-on-scroll">
-          Privacy-first Android Apps
+          Privacy-first &middot; Offline-first
         </p>
         <AgamLogomark size={56} className="mt-6 text-emerald-400 animate-on-scroll" />
         <h1 className="text-display gradient-text mt-4 animate-on-scroll">
-          Agam Labs
+          Apps built from the inside out.
         </h1>
         <p className="mt-4 text-xl text-white/60 dark:text-white/60 [html:not(.dark)_&]:text-black/50 animate-on-scroll">
-          Built inside. For what&apos;s inside.
+          Privacy-first. Offline-first. Your data stays yours.
         </p>
         <p className="mt-8 flex items-center gap-2 text-sm font-medium tracking-wide text-white/40 dark:text-white/40 [html:not(.dark)_&]:text-black/40 animate-on-scroll">
           <ShieldCheck className="h-4 w-4 text-emerald-400" />
-          Zero data collected. Ever.
+          Your data, your rules.
         </p>
       </section>
 
@@ -121,14 +121,17 @@ export default function HomePage() {
           <br />
           <span className="gradient-text">It&apos;s the architecture.</span>
         </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-base text-white/50 dark:text-white/50 [html:not(.dark)_&]:text-black/50 leading-relaxed animate-on-scroll">
+          Some of our apps never touch the internet. Others connect only when you ask. All of them put your data in your hands.
+        </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
           {[
             {
               icon: CloudOff,
-              title: "No Cloud",
+              title: "Offline by Default",
               description:
-                "Our apps don't have the INTERNET permission. They literally cannot send your data anywhere.",
+                "Our core apps don't have the INTERNET permission — they literally cannot send your data anywhere. Apps that connect do so only when you choose.",
             },
             {
               icon: ShieldCheck,
@@ -138,9 +141,9 @@ export default function HomePage() {
             },
             {
               icon: Smartphone,
-              title: "Your Device Only",
+              title: "Your Device First",
               description:
-                "All processing happens on your phone. Uninstall and everything is gone — there's nothing on our side.",
+                "All processing happens on your phone. Your data stays local unless you explicitly opt in to a connected feature.",
             },
           ].map((item) => (
             <div

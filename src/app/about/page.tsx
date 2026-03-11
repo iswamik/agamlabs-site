@@ -7,7 +7,7 @@ import { AgamLogomark } from "@/components/logos/agam-logo";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Agam Labs — privacy-first Android apps built in India. No data collected, no cloud, everything on-device.",
+    "About Agam Labs — privacy-first, offline-first Android apps built in India. Your data, your rules.",
 };
 
 const philosophy = [
@@ -15,7 +15,7 @@ const philosophy = [
     icon: Lock,
     title: "Privacy by Design",
     description:
-      "Not as a feature, but as an architecture. Our apps don't have the INTERNET permission. They literally cannot send your data anywhere.",
+      "Not as a feature, but as an architecture. Our core apps don't even have the INTERNET permission. When an app does connect, it tells you exactly what, why, and where.",
   },
   {
     icon: Globe,
@@ -27,13 +27,13 @@ const philosophy = [
     icon: Heart,
     title: "Simple & Honest",
     description:
-      "No dark patterns. No upsell pressure. No subscription traps. One-time purchase for premium. Free tier that's genuinely useful.",
+      "No dark patterns. No upsell pressure. Free tier that's genuinely useful. Premium that's worth it.",
   },
   {
     icon: Cpu,
-    title: "On-Device Everything",
+    title: "Offline-First Always",
     description:
-      "All processing happens on your phone. Scan results stay in local storage. Uninstall the app and everything is gone — because there's nothing on our side to begin with.",
+      "All processing happens on your phone by default. Some apps may offer optional cloud features — but they always work fully offline. Your data stays local unless you say otherwise.",
   },
 ];
 
@@ -62,13 +62,12 @@ export default function AboutPage() {
         </h2>
         <div className="mx-auto mt-8 max-w-3xl space-y-4 animate-on-scroll">
           <p className="text-lg text-white/60 dark:text-white/60 [html:not(.dark)_&]:text-black/50 leading-relaxed">
-            We build Android apps that respect your privacy completely. No data
-            collection. No cloud servers. No analytics. No tracking. Everything
-            runs on your device, and your data never leaves it.
+            We build Android apps that respect your privacy by default. No analytics. No tracking. Everything
+            runs on your device first — and your data never leaves without your explicit permission.
           </p>
           <p className="text-lg text-white/60 dark:text-white/60 [html:not(.dark)_&]:text-black/50 leading-relaxed">
-            In a world where every app wants your data, we chose a different
-            path. We believe the best apps are the ones that work for you — not
+            Some of our apps never touch the internet. Others connect only when you choose. All of them
+            put your data in your hands. We believe the best apps are the ones that work for you — not
             the ones that work on you.
           </p>
         </div>
@@ -113,8 +112,8 @@ export default function AboutPage() {
               அகம்
             </span>{" "}
             is a Tamil word meaning &ldquo;inside&rdquo; or &ldquo;within.&rdquo;
-            It represents our core belief: your data belongs inside your device.
-            Your photos, your notifications, your digital life — it&apos;s all
+            It represents our design philosophy: build from the inside out.
+            Privacy by default. Offline-first. Your photos, your notifications, your digital life — it&apos;s all
             yours. We just build the tools to help you manage it better.
           </p>
           <Badge
